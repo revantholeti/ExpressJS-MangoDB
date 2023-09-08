@@ -7,19 +7,6 @@ const port = 3000;
 app.use(express.json());
 app.use("/api", userRoutes);
 
-/*
-const connectDB = async () => {
-    try {
-        mongoose.set('strictQuery', false);
-        const conn = await mongoose.connect(process.env.MONGODB_URI);
-        console.log(`connected to database: ${conn.connection.host}`);
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-*/
-
 mongoose
   .connect(
     "mongodb+srv://test:test@cluster1.d6vbnhi.mongodb.net/?retryWrites=true&w=majority",
